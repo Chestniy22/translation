@@ -19,3 +19,4 @@ https://ai.stanford.edu/~amaas/data/sentiment/
 ![image](https://user-images.githubusercontent.com/119978648/234875156-12d38747-5c07-4796-9149-0ff72c1e4f95.png)
 
 На рисунке ниже представлена диаграмма компонентов процесса работы системы, архитектура которой представлена выше в виде диаграммы компонентов.
+![image](https://user-images.githubusercontent.com/119978648/234882123-d8e56f2d-c7a7-4c74-949b-71c6e011994a.png)
