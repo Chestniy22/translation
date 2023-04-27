@@ -13,4 +13,5 @@
 ## Набор данных:
 https://ai.stanford.edu/~amaas/data/sentiment/
 ## Целесообразность:
-![image](https://user-images.githubusercontent.com/119978648/234862544-03f35301-cd97-487e-8800-89d0930add03.png)
+рисунок 1 ![image](https://user-images.githubusercontent.com/119978648/234862544-03f35301-cd97-487e-8800-89d0930add03.png)
+На рисунке 1 представлен график обучения. Стоит 
