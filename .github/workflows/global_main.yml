@@ -1,4 +1,4 @@
-name: translate
+name: translation
 
 on:
   workflow_dispatch:
