@@ -6,7 +6,6 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 import numpy as np
 import matplotlib.pyplot as plt
 
-
 data = pd.read_csv('IMDB Dataset.csv')
 
 word_index = imdb.get_word_index()
