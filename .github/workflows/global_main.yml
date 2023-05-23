@@ -16,8 +16,8 @@ jobs:
           KAGGLE_USERNAME: ${{ secrets.CHESTNIY }}
           KAGGLE_KEY: ${{ secrets.KAGGLE_KEY }}
         run: |
-          kaggle kernels pull lakshmi25npathi/sentiment-analysis-of-imdb-movie-reviews
-       #   unzip sentiment-analysis-of-imdb-movie-reviews
+          kaggle datasets download -d lakshmi25npathi/imdb-dataset-of-50k-movie-reviews
+          unzip imdb-dataset-of-50k-movie-reviews.zip
       - name: Upload CSV files as artifact - 1
         uses: actions/upload-artifact@v3.1.2
         with:
