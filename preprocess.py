@@ -24,21 +24,3 @@ for key, value in word_index.items():
     
 for i in range(1, 21):
     print(i, '->', reverse_word_index[i])
-
-    index = 3
-message = ''
-for code in x_train[index]:
-    word = reverse_word_index.get(code - 3, '?')
-    message += word + ' '
-message
-
-y_train[index]
-
-maxlen = 200
-
-x_train = pad_sequences(x_train, maxlen=maxlen, padding='post')
-x_test = pad_sequences(x_test, maxlen=maxlen, padding='post')
-
-x_train[3]
-
-y_train[3]
