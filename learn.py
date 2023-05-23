@@ -1,4 +1,11 @@
-    index = 3
+from tensorflow.keras.datasets import imdb
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense
+from tensorflow.keras import utils
+from tensorflow.keras.preprocessing.sequence import pad_sequences
+import numpy as np
+
+index = 3
 message = ''
 for code in x_train[index]:
     word = reverse_word_index.get(code - 3, '?')
@@ -16,12 +23,7 @@ x_train[3]
 
 y_train[3]
 
-from tensorflow.keras.datasets import imdb
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense
-from tensorflow.keras import utils
-from tensorflow.keras.preprocessing.sequence import pad_sequences
-import numpy as np
+
 
 model = Sequential()
 model.add(Dense(128, activation='relu', input_shape=(maxlen,)))
