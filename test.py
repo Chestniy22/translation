@@ -1,3 +1,3 @@
 import pandas as pd
-data = pd.read_csv("imdb-dataset-of-50k-movie-reviews.csv")
+data = pd.read_csv("IMDB Dataset.csv")
 print(pd.head(10))
