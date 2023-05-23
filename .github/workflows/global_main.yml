@@ -35,15 +35,15 @@ jobs:
       - name: Preprocessing
         run: |
           python preprocess.py
-      - name: Upload a Build Artifact - 2
-        uses: actions/upload-artifact@v3.1.2
-        with:
-          name: preprocess_file
-          path: |
-            x_train.csv
-            x_test.csv
-            y_train.csv
-            y_test.csv
+#       - name: Upload a Build Artifact - 2
+#         uses: actions/upload-artifact@v3.1.2
+#         with:
+#           name: preprocess_file
+#           path: |
+#             x_train.csv
+#             x_test.csv
+#             y_train.csv
+#             y_test.csv
           
 #   Feature-Extraction:
 #     needs: download-dataset-processing
