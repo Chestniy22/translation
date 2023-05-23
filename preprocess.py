@@ -5,7 +5,7 @@ from tensorflow.keras import utils
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 import numpy as np
 import matplotlib.pyplot as plt
-%matplotlib inline 
+
 
 data = pd.read_csv('IMDB Dataset.csv')
 
