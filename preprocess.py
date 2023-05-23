@@ -4,6 +4,7 @@ from tensorflow.keras.layers import Dense
 from tensorflow.keras import utils
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 import numpy as np
+import pandas as pd
 import matplotlib.pyplot as plt
 
 data = pd.read_csv('IMDB Dataset.csv')
