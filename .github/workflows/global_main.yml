@@ -13,8 +13,8 @@ jobs:
         run: pip install kaggle
       - name: Download dataset from Kaggle
         env:
-          KAGGLE_USERNAME: ${{ secrets.Chestniy }}
-          KAGGLE_KEY: ${{ secrets.Kaggle_key }}
+          KAGGLE_USERNAME: ${{ secrets.CHESTNIY }}
+          KAGGLE_KEY: ${{ secrets.KAGGLE_KEY }}
         run: |
           kaggle kernels pull lakshmi25npathi/sentiment-analysis-of-imdb-movie-reviews
           unzip sentiment-analysis-of-imdb-movie-reviews.zip
