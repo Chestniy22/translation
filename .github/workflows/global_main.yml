@@ -35,69 +35,28 @@ jobs:
       - name: Preprocessing
         run: |
           python preprocess.py
-#       - name: Upload a Build Artifact - 2
-#         uses: actions/upload-artifact@v3.1.2
-#         with:
-#           name: preprocess_file
-#           path: |
-#             x_train.csv
-#             x_test.csv
-#             y_train.csv
-#             y_test.csv
-          
-#   Feature-Extraction:
-#     needs: download-dataset-processing
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: Checkout code
-#         uses: actions/checkout@v3.5.2
-#       - name: Download artifact - 1
-#         uses: actions/download-artifact@v3.0.2
-#         with:
-#           name: preprocess_file
-#       - name: Install Python
-#         uses: actions/setup-python@v4.6.0
-#         with:
-#           python-version: 3.9
-#       - name: Upgrade pip
-#         run: pip install --upgrade pip
-#       - name: Install dependencies
-#         run: pip install -r req.txt
-#       - name: Feature
-#         run: |
-#           python feature.py
-#       - name: Upload a Build Artifact - 3
-#         uses: actions/upload-artifact@v3.1.2
-#         with:
-#           name: feature
-#           path: |
-#             vectorizer.joblib
 
-#   Learn-and-save-models:
-#     needs: Feature-Extraction
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: Checkout code
-#         uses: actions/checkout@v3.5.2
-#       - name: Download artifact - 2
-#         uses: actions/download-artifact@v3.0.2
-#         with:
-#           name: preprocess_file
-#       - name: Download artifact - 3
-#         uses: actions/download-artifact@v3.0.2
-#         with:
-#           name: feature
-#       - name: Install Python
-#         uses: actions/setup-python@v4.6.0
-#         with:
-#           python-version: 3.9
-#       - name: Upgrade pip
-#         run: pip install --upgrade pip
-#       - name: Install dependencies
-#         run: pip install -r req.txt
-#       - name: Learn and Save
-#         run: |
-#           python learn_and_save.py
+  Learn-and-save-models:
+    needs: download-dataset-processing
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3.5.2
+      - name: Download artifact - 2
+        uses: actions/download-artifact@v3.0.2
+        with:
+          name: csv-files
+      - name: Install Python
+        uses: actions/setup-python@v4.6.0
+        with:
+          python-version: 3.9
+      - name: Upgrade pip
+        run: pip install --upgrade pip
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Learn and Save
+        run: |
+          python learn.py
 #       - name: Upload a Build Artifact - 4
 #         uses: actions/upload-artifact@v3.1.2
 #         with:
