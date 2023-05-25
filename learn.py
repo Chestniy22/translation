@@ -66,7 +66,7 @@ start_time = time.time()
 y_pred = model.predict(x_test)
 end_time = time.time()
 conf_matrix = classification_report(y_pred.round(),y_test)
-report = classification_report(y_test, y_pred, target_names=target_names)
+report = classification_report(y_test, y_pred.round(), target_names=target_names)
 
 with open('results.txt', 'w') as f:
     f.write('Classification report:\n{}\n\n'.format(report))
@@ -94,7 +94,7 @@ start_time = time.time()
 y_pred = model.predict(x_test)
 end_time = time.time()
 conf_matrix = classification_report(y_pred.round(),y_test)
-report = classification_report(y_test, y_pred, target_names=target_names)
+report = classification_report(y_test, y_pred.round(), target_names=target_names)
 
 with open('results2.txt', 'w') as f:
     f.write('Classification report:\n{}\n\n'.format(report))
