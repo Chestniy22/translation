@@ -13,7 +13,7 @@ jobs:
         run: pip install kaggle
       - name: Download dataset from Kaggle
         env:
-          KAGGLE_USERNAME: ${{ secrets.USERNAME }}
+          KAGGLE_USERNAME: ${{ secrets.CHESTNIY }}
           KAGGLE_KEY: ${{ secrets.KAGGLE_KEY }}
         run: |
           kaggle datasets download -d lakshmi25npathi/imdb-dataset-of-50k-movie-reviews
