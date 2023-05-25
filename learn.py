@@ -41,7 +41,11 @@ y_train[3]
 
 model = Sequential()
 model.add(Dense(128, activation='relu', input_shape=(maxlen,)))
+model.add(Dense(256, activation='relu'))
+model.add(Dense(128, activation='relu'))
 model.add(Dense(64, activation='relu'))
+model.add(Dense(32, activation='relu'))
+model.add(Dense(8, activation='relu'))
 model.add(Dense(1, activation='sigmoid'))
 
 model.compile(optimizer='adam', 
@@ -54,5 +58,3 @@ history = model.fit(x_train,
                     batch_size=128,
                     validation_split=0.1)
 
-scores = model.evaluate(x_test, y_test, verbose=1)
-print("Доля верных ответов на тестовых данных, в процентах:", round(scores[1] * 100, 4))
