@@ -7,6 +7,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import time
 from sklearn.metrics import classification_report
+import joblib
 
 max_words=10000
 (x_train, y_train), (x_test, y_test) = imdb.load_data(num_words=max_words)
