@@ -63,10 +63,10 @@ history = model.fit(x_train,
 joblib.dump(model,'model1.joblib')
 target_names = ['negative', 'positive']
 start_time = time.time()
-y_pred = model.predict(x_test_new)
+y_pred = model.predict(x_test)
 end_time = time.time()
-conf_matrix = classification_report(y_pred.round(),y_test_new)
-report = classification_report(y_test_new, y_pred, target_names=target_names)
+conf_matrix = classification_report(y_pred.round(),y_test)
+report = classification_report(y_test, y_pred, target_names=target_names)
 
 with open('results.txt', 'w') as f:
     f.write('Classification report:\n{}\n\n'.format(report))
@@ -91,10 +91,10 @@ history = model.fit(x_train,
 joblib.dump(model,'model2.joblib')
 target_names = ['negative', 'positive']
 start_time = time.time()
-y_pred = model.predict(x_test_new)
+y_pred = model.predict(x_test)
 end_time = time.time()
-conf_matrix = classification_report(y_pred.round(),y_test_new)
-report = classification_report(y_test_new, y_pred, target_names=target_names)
+conf_matrix = classification_report(y_pred.round(),y_test)
+report = classification_report(y_test, y_pred, target_names=target_names)
 
 with open('results2.txt', 'w') as f:
     f.write('Classification report:\n{}\n\n'.format(report))
