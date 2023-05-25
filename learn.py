@@ -59,7 +59,7 @@ history = model.fit(x_train,
                     epochs=25,
                     batch_size=128,
                     validation_split=0.1)
-
+joblib.dump(model,'model1.joblib')
 target_names = ['negative', 'positive']
 start_time = time.time()
 y_pred = model.predict(x_test_new)
@@ -87,7 +87,7 @@ history = model.fit(x_train,
                     epochs=25,
                     batch_size=128,
                     validation_split=0.1)
-
+joblib.dump(model,'model2.joblib')
 target_names = ['negative', 'positive']
 start_time = time.time()
 y_pred = model.predict(x_test_new)
